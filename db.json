@@ -1,0 +1,11 @@
+{
+  "users": [
+    { "id": "7", "firstName": "Dhoni", "age": 41, "companyId": "1" },
+    { "id": "10", "firstName": "Sachin", "age": 49, "companyId": "2" },
+    { "id": "17", "firstName": "Rohit", "age": "33", "companyId": "2" }
+  ],
+  "companies": [
+    { "id": "1", "name": "CSK" },
+    { "id": "2", "name": "MI" }
+  ]
+}
