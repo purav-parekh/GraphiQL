@@ -1,0 +1,27 @@
+# add new data
+# the object after the args in the addUser function is the return object after the successful addition of the values
+mutation {
+  addUser(firstName: "Dhruv", age: 23) {
+    id
+    firstName
+    age
+  }
+}
+
+# delete data
+
+mutation {
+  deleteUser(id: "3952") {
+    id
+  }
+}
+
+# patch data
+
+mutation {
+  patchUser(id: "af75", firstName: "Virat Kohli") {
+    id
+    firstName
+    age
+  }
+}
