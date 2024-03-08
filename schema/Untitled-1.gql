@@ -1,0 +1,53 @@
+# Simple query + nested query
+
+{
+  user(id: "7") {
+    firstName
+    age
+    company {
+      name
+    }
+  }
+}
+
+# named query
+
+query getCompany {
+  user(id: "7") {
+    firstName
+    age
+    company {
+      name
+    }
+  }
+}
+
+# name individual items
+
+{
+  csk: company(id: "1") {
+    name
+    id
+  }
+  mi: company(id: "2") {
+    name
+    id
+  }
+}
+
+# query fragemnts - to avoid repitition of properties
+
+{
+  csk: company(id: "1") {
+    ...companyDetails
+  }
+  mi: company(id: "2") {
+    ...companyDetails
+  }
+}
+
+fragment companyDetails on Company {
+  id
+  name
+  description
+}
